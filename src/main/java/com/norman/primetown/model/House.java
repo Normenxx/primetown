@@ -1,4 +1,4 @@
-package com.norman.primetown.controller;
+package com.norman.primetown.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,6 +16,9 @@ public class House {
     private int yearOfConstruction;
 
     private int number;
+
+    public House() {
+    }
 
     public House(String owner, int yearOfConstruction, int number) {
         this.owner = owner;
