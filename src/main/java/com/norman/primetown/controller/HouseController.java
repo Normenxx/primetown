@@ -26,4 +26,9 @@ public class HouseController {
     public House updateHouse(@PathVariable Long id, @RequestBody House house){
         return houseService.updateHouse(id,house);
     }
+
+    @DeleteMapping ("/house/{id}")
+    public void deleteHouse(@PathVariable Long id){
+        houseService.deleteHouse(id);
+    }
 }

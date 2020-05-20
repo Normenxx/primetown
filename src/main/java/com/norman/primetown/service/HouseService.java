@@ -29,4 +29,9 @@ public class HouseService {
             throw new HouseIdNotFoundException();
         }
     }
+
+    public void deleteHouse(Long id) {
+        House house = this.getHouse(id);
+        houseRepo.delete(house);
+    }
 }
