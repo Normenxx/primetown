@@ -16,4 +16,8 @@ public class HouseService {
     public House getHouse(Long id) {
         return houseRepo.findById(id).orElseThrow(HouseIdNotFoundException::new);
     }
+
+    public House insertHouse(House house) {
+        return houseRepo.save(house);
+    }
 }
