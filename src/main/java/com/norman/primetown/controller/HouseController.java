@@ -21,4 +21,9 @@ public class HouseController {
     public House insertHouse(@RequestBody House house){
         return houseService.insertHouse(house);
     }
+
+    @PutMapping ("/house/{id}")
+    public House updateHouse(@PathVariable Long id, @RequestBody House house){
+        return houseService.updateHouse(id,house);
+    }
 }
